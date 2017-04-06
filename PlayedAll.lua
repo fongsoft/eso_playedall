@@ -15,4 +15,9 @@ function PlayedAll.OnAddOnLoaded(event, addonName)
 	end
 end
 
+function playedAll()
+	d('Ran /playedall.')
+end
+
 EVENT_MANAGER:RegisterForEvent(PlayedAll.name, EVENT_ADD_ON_LOADED, PlayedAll.OnAddOnLoaded)
+SLASH_COMMANDS["/playedall"] = playedAll
